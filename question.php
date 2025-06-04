@@ -381,7 +381,7 @@ class qtype_wq_question extends question_graded_automatically {
         global $CFG;
 
         $builder = com_wiris_quizzes_api_Quizzes::getInstance();
-        $metaproperty = ((!empty($COURSE) ? $COURSE->id : '') . '/' . (!empty($question) ? $question->id : ''));
+        $metaproperty = ((!empty($COURSE) ? $COURSE->id : '') . '/' . (!empty($this->id) ? $this->id : ''));
 
         // Add meta properties.
         $request->addMetaProperty('questionref', $metaproperty);
